@@ -1,0 +1,146 @@
+:root{
+    --salmon: #EF9071;
+    --black: #000000;
+    --white:#ffffff;
+    --cyan:#80becc;
+    --dsalmon:#532521;
+    --dcyan:#1f2f32;
+    
+    
+}
+
+*::selection{
+    background-color: var(--salmon);
+}
+
+
+
+
+body[theme="black"]{
+    background-color: black;
+}
+
+body[theme="black"] .section{
+    color: white;
+}
+body[theme="cyan"]{
+    background-color: rgb(0, 203, 203);
+}
+
+body[theme="cyan"] .section{
+   color: rgb(21, 40, 40);
+}
+
+
+body[theme="salmon"]{
+    background-color: salmon;
+}
+body[theme="salmon"] .section{
+  color: rgb(69, 33, 29);
+}
+
+
+body[theme="white"]{
+    background-color: rgb(255, 255, 255);
+}
+body[theme="white"] .section{
+   color: black;
+}
+
+#minicircle{
+    transition: cubic-bezier(0.19, 1, 0.22, 1)1s;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    z-index: 99;
+    border-radius: 50%;
+    background-color: #fff;
+
+}
+
+
+.vdodiv{
+    clip-path: circle(var(--clip) at  50% 50%);
+}
+
+
+
+
+ .moving-text::-webkit-scrollbar{
+    display: none;
+ }
+
+ .con{
+
+  animation-name: move1;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+ }
+
+ .moving-text h1{
+    display: inline-block;
+ }
+
+
+ @keyframes move1 {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+ }
+
+
+ .moving-text h1{
+    display: inline-block;
+ }
+ .con2{
+
+    animation-name: move2;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  
+   }
+  
+
+  
+   @keyframes move2 {
+      from{
+          transform: translate(-100%);
+      }
+      to{
+          transform: translate(0);
+      }
+   }
+
+
+.heroPara{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translatey(-30%);
+    transition: all 2s;
+ }
+ .put{
+     opacity: 1;
+     filter: blur(0);
+     transform: translatey(0);
+  
+ 
+ }
+.heroHeading{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translatex(-100%);
+    transition: all 3s;
+ }
+ .show{
+     opacity: 1;
+     filter: blur(0);
+     transform: translatex(0);
+  
+ 
+ }
